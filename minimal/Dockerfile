@@ -21,7 +21,7 @@ ARG JRE='openjdk-14-jre-headless'
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install $JRE
 
 FROM dependencies as fetch_tika
-ARG TIKA_VERSION
+ARG TIKA_VERSION=1.24.1
 ARG CHECK_SIG=true
 
 ENV NEAREST_TIKA_SERVER_URL="https://www.apache.org/dyn/closer.cgi/tika/tika-server-${TIKA_VERSION}.jar?filename=tika/tika-server-${TIKA_VERSION}.jar&action=download" \
